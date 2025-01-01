@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+/* Portfolio Section */
+.portfolio-item {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.portfolio-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.portfolio-item p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Upload Section */
+.upload-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form input[type="file"] {
+  margin: 15px 0;
+}
+
+.upload-form button {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Error Page */
+.error-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.error-container h2 {
+  color: #d9534f;
+}
+
+.error-container p {
+  font-size: 1.2rem;
+  color: #555;
+}

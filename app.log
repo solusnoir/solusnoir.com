@@ -1,0 +1,69 @@
+2025-01-01 05:15:52,997 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:19:28,953 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:21:27,037 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:23:52,762 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:25:19,190 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:25:19,222 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-01-01 05:25:19,222 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-01 05:25:19,223 - werkzeug - INFO -  * Restarting with stat
+2025-01-01 05:25:19,586 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:25:19,602 - werkzeug - WARNING -  * Debugger is active!
+2025-01-01 05:25:19,613 - werkzeug - INFO -  * Debugger PIN: 887-421-482
+2025-01-01 05:25:31,785 - __main__ - ERROR - Error in home: x1 must be greater than or equal to x0
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 62, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 121, in home
+    art_image_path = create_random_art()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 109, in create_random_art
+    draw.rectangle(coordinates, fill=color)
+  File "/Users/arnostyns/Desktop/solus_ai V2/.venv/lib/python3.11/site-packages/PIL/ImageDraw.py", line 411, in rectangle
+    self.draw.draw_rectangle(xy, fill_ink, 1)
+ValueError: x1 must be greater than or equal to x0
+
+2025-01-01 05:25:31,786 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:25:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 05:25:31,949 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:25:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-01 05:25:34,806 - __main__ - ERROR - Error in home: x1 must be greater than or equal to x0
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 62, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 121, in home
+    art_image_path = create_random_art()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 109, in create_random_art
+    draw.rectangle(coordinates, fill=color)
+  File "/Users/arnostyns/Desktop/solus_ai V2/.venv/lib/python3.11/site-packages/PIL/ImageDraw.py", line 411, in rectangle
+    self.draw.draw_rectangle(xy, fill_ink, 1)
+ValueError: x1 must be greater than or equal to x0
+
+2025-01-01 05:25:34,807 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:25:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 05:25:37,754 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:25:37] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-01-01 05:25:37,756 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:25:37] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-01-01 05:25:37,757 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:25:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-01 05:30:55,812 - werkzeug - INFO -  * Detected change in '/Users/arnostyns/Desktop/solus_ai V2/app.py', reloading
+2025-01-01 05:30:55,948 - werkzeug - INFO -  * Restarting with stat
+2025-01-01 05:30:56,402 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 05:30:56,438 - werkzeug - WARNING -  * Debugger is active!
+2025-01-01 05:30:56,449 - werkzeug - INFO -  * Debugger PIN: 887-421-482
+2025-01-01 05:31:25,615 - __main__ - ERROR - Error in home: x1 must be greater than or equal to x0
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 59, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 124, in home
+    art_image_path = create_random_art()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_ai V2/app.py", line 112, in create_random_art
+    draw.rectangle(coordinates, fill=color)
+  File "/Users/arnostyns/Desktop/solus_ai V2/.venv/lib/python3.11/site-packages/PIL/ImageDraw.py", line 411, in rectangle
+    self.draw.draw_rectangle(xy, fill_ink, 1)
+ValueError: x1 must be greater than or equal to x0
+
+2025-01-01 05:31:25,618 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 05:31:27,164 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:27] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-01-01 05:31:27,166 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:27] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-01-01 05:31:27,166 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

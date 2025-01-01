@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Key - Solus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="/">Solus Noir</a>
+        <div class="nav-links">
+            <a href="/find-key">Find Key</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Upload Audio File to Find Key & BPM</h1>
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="file-input" accept=".mp3, .wav, .m4a, .flac" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="loading" style="display:none;">Processing...</div>
+
+        <div id="results" style="display:none;">
+            <h2>Analysis Results</h2>
+            <div class="result">
+                <div class="result-header">File Name</div>
+                <div id="result-file-name"></div>
+            </div>
+            <div class="result">
+                <div class="result-header">BPM</div>
+                <div id="result-bpm"></div>
+            </div>
+            <div class="result">
+                <div class="result-header">Key</div>
+                <div id="result-key"></div>
+            </div>
+            <div class="result">
+                <div class="result-header">Confidence</div>
+                <div id="result-confidence"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        const fileInput = document.getElementById('file-input');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+
+        form.onsubmit = function (event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('POST', '/find-key', true);
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    if (data.file_name) {
+                        document.getElementById('result-file-name').innerText = data.file_name;
+                        document.getElementById('result-bpm').innerText = data.bpm;
+                        document.getElementById('result-key').innerText = data.key;
+                        document.getElementById('result-confidence').innerText = data.confidence + '%';
+
+                        results.style.display = 'block';
+                        loading.style.display = 'none';
+                    }
+                } else {
+                    alert('Error: ' + xhr.responseText);
+                    loading.style.display = 'none';
+                }
+            };
+
+            xhr.onerror = function () {
+                alert('An error occurred while uploading the file.');
+                loading.style.display = 'none';
+            };
+
+            loading.style.display = 'block';
+            results.style.display = 'none';
+            xhr.send(formData);
+        };
+    </script>
+</body>
+
+</html>
