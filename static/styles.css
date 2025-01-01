@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #E0E0E0;
   line-height: 1.6;
   font-size: 16px;
   margin: 0;
@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #00bfff;
+  color: #00BFFF;
   text-decoration: none;
 }
 
@@ -49,11 +49,11 @@ header nav ul li {
 header nav ul li a {
   font-size: 18px;
   font-weight: bold;
-  color: #e0e0e0;
+  color: #E0E0E0;
 }
 
 header nav ul li a:hover {
-  color: #00bfff;
+  color: #00BFFF;
 }
 
 /* Main Content */
@@ -62,11 +62,9 @@ main {
   text-align: center;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Arial", sans-serif;
-  color: #ffffff;
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  color: #FFFFFF;
   margin-bottom: 15px;
 }
 
@@ -96,8 +94,7 @@ form input[type="file"] {
   margin-bottom: 20px;
 }
 
-form input[type="text"],
-form textarea {
+form input[type="text"], form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -107,9 +104,8 @@ form textarea {
   border-radius: 5px;
 }
 
-form input[type="submit"],
-form button {
-  background-color: #00bfff;
+form input[type="submit"], form button {
+  background-color: #00BFFF;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -119,9 +115,8 @@ form button {
   transition: background-color 0.3s;
 }
 
-form input[type="submit"]:hover,
-form button:hover {
-  background-color: #008c9e;
+form input[type="submit"]:hover, form button:hover {
+  background-color: #008C9E;
 }
 
 /* Portfolio Page */
@@ -155,7 +150,7 @@ form button:hover {
 
 .portfolio-item .file-name {
   font-size: 18px;
-  color: #00bfff;
+  color: #00BFFF;
   margin-bottom: 10px;
 }
 
@@ -188,7 +183,7 @@ form button:hover {
 }
 
 .upload-container .upload-btn {
-  background-color: #00bfff;
+  background-color: #00BFFF;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -199,14 +194,14 @@ form button:hover {
 }
 
 .upload-container .upload-btn:hover {
-  background-color: #008c9e;
+  background-color: #008C9E;
 }
 
 /* Footer */
 footer {
   background-color: #1f1f1f;
   padding: 10px 0;
-  color: #e0e0e0;
+  color: #E0E0E0;
   text-align: center;
 }
 
@@ -215,7 +210,7 @@ footer p {
 }
 
 footer a {
-  color: #00bfff;
+  color: #00BFFF;
 }
 
 footer a:hover {
@@ -225,7 +220,7 @@ footer a:hover {
 /* Button Styles */
 .button {
   display: inline-block;
-  background-color: #00bfff;
+  background-color: #00BFFF;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -235,44 +230,43 @@ footer a:hover {
 }
 
 .button:hover {
-  background-color: #008c9e;
+  background-color: #008C9E;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   header nav ul {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   header nav ul li {
-    margin: 10px 0;
+      margin: 10px 0;
   }
 
   .portfolio-container {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .portfolio-item {
-    width: 80%;
-    margin-bottom: 20px;
+      width: 80%;
+      margin-bottom: 20px;
   }
 
-  .upload-container input[type="file"],
-  .upload-container .upload-btn {
-    width: 100%;
+  .upload-container input[type="file"], .upload-container .upload-btn {
+      width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 30px;
+      font-size: 30px;
   }
 
   h2 {
-    font-size: 24px;
+      font-size: 24px;
   }
 
   h3 {
-    font-size: 18px;
+      font-size: 18px;
   }
 }

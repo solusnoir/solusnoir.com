@@ -10,33 +10,36 @@
 </head>
 
 <body>
-    <header>
-        <h1>Audio Portfolio</h1>
+    <header class="header">
+        <h1 id="main-title">SOLUS NOIR</h1>
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/upload">Upload</a>
+        </nav>
     </header>
-    <div class="portfolio-section">
-        <h2>Beats</h2>
-        {% for file in audio_files_info['beats'] %}
-        <p><a href="https://drive.google.com/file/d/{{ file['id'] }}/view" target="_blank">{{ file['name'] }}</a></p>
-        {% endfor %}
-    </div>
 
-    <div class="portfolio-section">
-        <h2>Demos</h2>
-        {% for file in audio_files_info['demos'] %}
-        <p><a href="https://drive.google.com/file/d/{{ file['id'] }}/view" target="_blank">{{ file['name'] }}</a></p>
-        {% endfor %}
-    </div>
-
-    <div class="portfolio-section">
-        <h2>New Uploads</h2>
-        {% for file in audio_files_info['new'] %}
-        <p><a href="{{ file['url'] }}">{{ file['name'] }}</a></p>
-        {% endfor %}
-    </div>
-
-    <footer>
-        <a href="{{ url_for('home') }}">Go to Home</a>
-    </footer>
+    <main>
+        <section class="audio-files">
+            <h2>Audio Files</h2>
+            <h3>Uploaded Beats</h3>
+            <div class="audio-list">
+                {% for file in audio_files_info.beats %}
+                <div class="audio-file">
+                    <a href="{{ file.url }}">{{ file.name }}</a>
+                </div>
+                {% endfor %}
+            </div>
+            <h3>New Files</h3>
+            <div class="audio-list">
+                {% for file in audio_files_info.new %}
+                <div class="audio-file">
+                    <a href="{{ file.url }}">{{ file.name }}</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
