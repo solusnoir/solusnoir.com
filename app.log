@@ -67,3 +67,207 @@ ValueError: x1 must be greater than or equal to x0
 2025-01-01 05:31:27,164 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:27] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
 2025-01-01 05:31:27,166 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:27] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
 2025-01-01 05:31:27,166 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 05:31:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-01 20:11:27,292 - __main__ - ERROR - Error initializing Google Drive service: [Errno 2] No such file or directory: '/Users/arnostyns/Desktop/solus_aiV2/solusnoir-446321-79801a466e30.json'
+2025-01-01 20:33:37,887 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 20:33:37,889 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-01-01 20:33:37,893 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-01 20:33:37,893 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-01 20:33:59,352 - __main__ - ERROR - Error in home_v1: name 'get_visitor_count' is not defined
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+    return render_template('index.html', visitor_count=get_visitor_count())
+                                                       ^^^^^^^^^^^^^^^^^
+NameError: name 'get_visitor_count' is not defined
+
+2025-01-01 20:33:59,352 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+    return render_template('index.html', visitor_count=get_visitor_count())
+                                                       ^^^^^^^^^^^^^^^^^
+NameError: name 'get_visitor_count' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 113, in decorated_function
+    return render_template('error.html', error="An error occurred. Please try again later."), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2025-01-01 20:33:59,356 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 20:33:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 20:33:59,378 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+    return render_template('index.html', visitor_count=get_visitor_count())
+                                                       ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'get_visitor_count' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 113, in decorated_function
+    return render_template('error.html', error="An error occurred. Please try again later."), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 333, in run_wsgi
+    execute(self.server.app)
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 320, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/app.py", line 1727, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 205, in internal_error
+    return render_template('error.html', error="Internal server error"), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/venv/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2025-01-01 20:41:49,413 - __main__ - ERROR - Error in home_v1: name 'get_visitor_count' is not defined
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+    return render_template('index.html', visitor_count=get_visitor_count())
+                                                       ^^^^^^^^^^^^^^^^^
+NameError: name 'get_visitor_count' is not defined
+
+2025-01-01 20:41:49,417 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 20:41:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 20:41:50,227 - __main__ - ERROR - Error in home_v1: name 'get_visitor_count' is not defined
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+    return render_template('index.html', visitor_count=get_visitor_count())
+                                                       ^^^^^^^^^^^^^^^^^
+NameError: name 'get_visitor_count' is not defined
+
+2025-01-01 20:41:50,227 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 20:41:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 20:41:50,795 - __main__ - ERROR - Error in home_v1: name 'get_visitor_count' is not defined
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+    return render_template('index.html', visitor_count=get_visitor_count())
+                                                       ^^^^^^^^^^^^^^^^^
+NameError: name 'get_visitor_count' is not defined
+
+2025-01-01 20:41:50,795 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 20:41:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 20:46:27,704 - __main__ - ERROR - Error in home_v1: name 'get_visitor_count' is not defined
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+NameError: name 'get_visitor_count' is not defined
+
+2025-01-01 20:46:27,704 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 20:46:27] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-01 20:46:28,536 - __main__ - ERROR - Error in home_v1: name 'get_visitor_count' is not defined
+Traceback (most recent call last):
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 110, in decorated_function
+  File "/Users/arnostyns/Desktop/solus_aiV2/solus-noir/app.py", line 132, in home_v1
+NameError: name 'get_visitor_count' is not defined
+
+2025-01-01 20:46:28,537 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 20:46:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
